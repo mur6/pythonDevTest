@@ -1,9 +1,20 @@
 {
-	"name": "Python 3.8",
-	"context": "..",
-	"dockerFile": "Dockerfile",
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash",
-		"python.pythonPath": "/usr/local/bin/python"
-	}
+    "name": "Python 3.8",
+    "context": "..",
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true
+    },
+    //"appPort": [9000],
+    // Install lightgbm, numpy and any other dependencies.
+    "postCreateCommand": "poetry install",
+    "extensions": [
+        "ms-python.python"
+    ]
 }
