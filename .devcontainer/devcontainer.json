@@ -1,0 +1,9 @@
+{
+	"name": "Python 3.8",
+	"context": "..",
+	"dockerFile": "Dockerfile",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "/usr/local/bin/python"
+	}
+}
